@@ -1,4 +1,5 @@
 $('#errors').html("");
+
 		<% if @user.errors.any? %>
 				
 		 $('#errors').html("<%= escape_javascript render(partial: 'layouts/errors' , locals: {errors: @user.errors.full_messages}) %>");
