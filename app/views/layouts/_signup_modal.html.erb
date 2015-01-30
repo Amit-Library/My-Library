@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body">
       <%= form_for(User.new, as: "User",url: homes_create_path,:remote => true) do |f| %>
-        <div id="errors" style="display:none"></div>
+        <div id="errors"></div>
         <div class="field">
           <%= f.label :first_name %><br />
           <%= f.text_field :first_name, autofocus: true, class: "form-control" %>
