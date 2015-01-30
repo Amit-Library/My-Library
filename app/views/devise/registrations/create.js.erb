@@ -1,8 +1,0 @@
-$('#errors').show();
-$('#errors').html("");
-<% if @user.errors.any? %>
-	$('#errors').html("<%=j render partial: 'errors', locals: {obj: @user} %>");
-	$('#errors').show();
-<% else %>
-	$('#myModal-sign-up').modal('hide');
-<% end %>	
