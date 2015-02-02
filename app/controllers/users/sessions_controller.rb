@@ -16,8 +16,10 @@ def create
   self.resource = warden.authenticate!(auth_options)
   set_flash_message(:notice, :signed_in) if is_navigational_format?
   sign_in(resource_name, resource)
-    if resource.seller?
-      redirect_to sellers_index_path
+    if current_user.log_type == "Admin"
+      redirect_to admin_index_path
+    elsif resource.seller?
+        redirect_to sellers_index_path
     else
       redirect_to buyers_index_path
     end
