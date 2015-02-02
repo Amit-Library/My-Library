@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   get 'admin/index' => 'admin#index'
   delete 'admin/destroy' => 'admin#destroy'
   get 'buyers/index'
