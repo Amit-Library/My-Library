@@ -16,8 +16,10 @@
         <td><%= user.first_name %>&nbsp;<%= user.last_name %></td>
         <td><%= user.email %></td>
         <td><%= user.log_type %></td>
-        <td><%= link_to 'Edit', admin_index_path %></td>
-        <td><%= link_to 'Destroy', admin_index_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', admin_destroy_path, 
+                                    method: :delete, data: 
+                                    { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
