@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admin/index'
+  get 'admin/destroy'
   get 'buyers/index'
   get 'buyers/show'
   get 'sellers/index'

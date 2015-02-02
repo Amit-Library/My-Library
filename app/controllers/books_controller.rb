@@ -4,8 +4,11 @@ class BooksController < ApplicationController
   respond_to :html
 
   def index
-    @books = Book.all
-    respond_with(@books)
+    if params[:search]
+      @books = Book.search(params[:search])
+    else
+      @books = Book.all
+    end
   end
 
   def show
