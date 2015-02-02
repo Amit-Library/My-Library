@@ -9,8 +9,7 @@ class AdminController < ApplicationController
 
   def destroy
   	user = User.find_by(params[:id])
-  	byebug
-  	  	user.destroy
-  	redirect_to admin_index_path
+  	  user.destroy
+  	  redirect_to admin_index_path
   end
 end
