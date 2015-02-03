@@ -1,8 +1,12 @@
 <%= link_to 'Back', buyers_index_path, :style => 'font-size: 30px;float: right;' %>
-<div class="container" style="">
-	 <!-- <%= image_tag @book.photo.url, :size => '200x200' %></br> -->
-  <strong>Book Name:</strong><%= @book.book_name %></br>
-	<strong>Author name:</strong><%= @book.author_name %></br>
-  <strong>Price:</strong><%= @book.price %>	</br>
-  <strong>Description:</strong><%= @book.description %></br>
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-4">
+			<%= image_tag @book.photo.url, :size => '200x200' %></br>
+		  <strong>Book Name:</strong><%= @book.book_name %></br>
+			<strong>Author name:</strong><%= @book.author_name %></br>
+		  <strong>Price:</strong><%= @book.price %>	</br>
+		  <strong>Description:</strong><%= @book.description %></br>
+		</div>
+	</div>
 </div>

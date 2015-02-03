@@ -1,6 +1,12 @@
-<h1>Editing Book</h1>
+<div class='container'>
+  <div class="row">
+    <div class="col-lg-6">
+			<h2>Edit Book</h2>
 
-<%= render 'form' %>
+			<%= render 'form' %>
 
-<%= link_to 'Show', @book %> |
-<%= link_to 'Back', sellers_index_path %>
+			<%= link_to 'Show', @book, :style => "font-size:20px;color: green;" %> |
+			<%= link_to 'Back', sellers_index_path, :style => "font-size:20px;color: green;" %>
+		</div>
+	</div>
+</div>
