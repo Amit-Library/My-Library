@@ -58,6 +58,15 @@
               <li class="navbar-text">Logged in as <%= current_user.email %></li>
               <li><%= link_to "Change Profile", edit_user_registration_path %></li>
               <li><%= link_to "Logout", destroy_user_session_path, :method => :delete  %></li>
+                <% if current_user.log_type = "Admin" %>
+                <li><%= link_to "Home", admin_index_path %></li>
+                <%end %>
+                <!--  <%# if current_user.log_type = "Seller" %>
+                <li><%#= link_to "Home", sellers_index_path %></li>
+                <%# end %>
+                 <% #if current_user.log_type = "Buyer" %>
+                <li><%#= link_to "Home", buyers_index_path %></li>
+                <%# end %> -->
               <% end %>
             </ul>
           </div>
